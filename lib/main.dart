@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:stream_skeleton/core/helpers/flavor_helper.dart';
-import 'package:stream_skeleton/core/injection_handler.dart';
+import 'package:stream_skeleton/core/injections/injection_handler.dart';
 import 'package:stream_skeleton/features/api_call_demo/presentation/api_call_demo_page.dart';
 
 final getIt = GetIt.asNewInstance();

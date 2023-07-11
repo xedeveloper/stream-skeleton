@@ -1,15 +1,18 @@
 import 'dart:async';
 
+import 'package:stream_skeleton/core/mixins/bloc_mixin.dart';
 import 'package:stream_skeleton/features/api_call_demo/bloc/demo_api_state.dart';
 
-class DemoApiBloc {
+class DemoApiBloc  with BlocMixin<DemoApiState>{
   final StreamController<DemoApiState> _apiController =
       StreamController<DemoApiState>();
 
+@override
   Stream<DemoApiState> get stream {
     return _apiController.stream;
   }
 
+@override
   StreamSink<DemoApiState> get sink {
     return _apiController.sink;
   }
@@ -25,7 +28,10 @@ class DemoApiBloc {
     );
   }
 
+@override
   void dispose() {
-    _apiController.close();
+  // Handle dispose
   }
+  
+
 }
